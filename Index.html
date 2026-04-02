@@ -228,9 +228,21 @@ justify-content:center;
 <a href="Tentangkami.html">Tentang Kami</a>
 </div>
 
-<div class="search-box">
-<input type="text" id="searchInput" placeholder="Cari...">
+<div class="search-box" style="position:relative;">
+<input type="text" id="searchInput" placeholder="Cari..." onkeyup="showSuggestions()">
 <button onclick="searchContent()">🔍</button>
+
+<div id="suggestions" style="
+position:absolute;
+top:40px;
+left:0;
+right:0;
+background:#fff;
+border:1px solid #ddd;
+border-radius:5px;
+display:none;
+z-index:999;
+"></div>
 </div>
 
 <a class="btn-wa" href="https://wa.me/6287838864993?text=Halo%20saya%20mau%20konsultasi%20label%20baju" target="_blank">
@@ -323,6 +335,48 @@ Konsultasi WhatsApp
 </footer>
 
 <script>
+// DATA YANG MAU DICARI
+let dataSearch = ["kenapa", "masalah", "solusi", "kontak", "whatsapp"];
+
+// TAMPILKAN SUGGESTION
+function showSuggestions(){
+let input = document.getElementById("searchInput").value.toLowerCase();
+let box = document.getElementById("suggestions");
+
+box.innerHTML = "";
+
+if(input === ""){
+  box.style.display = "none";
+  return;
+}
+
+// FILTER DATA
+let hasil = dataSearch.filter(item => item.includes(input));
+
+if(hasil.length === 0){
+  box.style.display = "none";
+  return;
+}
+
+// TAMPILKAN
+hasil.forEach(item => {
+  let div = document.createElement("div");
+  div.innerText = item;
+  div.style.padding = "8px";
+  div.style.cursor = "pointer";
+
+  div.onclick = function(){
+    document.getElementById("searchInput").value = item;
+    box.style.display = "none";
+    searchContent();
+  };
+
+  box.appendChild(div);
+});
+
+box.style.display = "block";
+}
+
 // ================= SEARCH =================
 function searchContent(){
 let input = document.getElementById("searchInput").value.toLowerCase();
