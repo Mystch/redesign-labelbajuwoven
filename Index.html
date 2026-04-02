@@ -229,8 +229,8 @@ justify-content:center;
 </div>
 
 <div class="search-box">
-<input type="text" placeholder="Cari...">
-<button>🔍</button>
+<input type="text" id="searchInput" placeholder="Cari...">
+<button onclick="searchContent()">🔍</button>
 </div>
 
 <a class="btn-wa" href="https://wa.me/6287838864993?text=Halo%20saya%20mau%20konsultasi%20label%20baju" target="_blank">
@@ -261,7 +261,7 @@ Konsultasi WhatsApp
 </section>
 
 <!-- POSITIONING -->
-<section class="section">
+<section class="section" id="kenapa">
 <h2>Kenapa Memilih Kami?</h2>
 <div class="position">
 <div class="position-card"><h3>Material Berkualitas</h3><p>Label premium tahan lama dan terlihat profesional.</p></div>
@@ -270,7 +270,7 @@ Konsultasi WhatsApp
 </section>
 
 <!-- PROBLEM -->
-<section class="section">
+<section class="section" id="masalah">
 <h2>Masalah yang Sering Terjadi</h2>
 <div class="grid">
 <div class="card"><h3>Label Rusak</h3><p>Mudah pudar setelah dicuci.</p></div>
@@ -280,7 +280,7 @@ Konsultasi WhatsApp
 </section>
 
 <!-- SOLUTION -->
-<section class="section">
+<section class="section" id="solusi">
 <h2>Solusi Kami</h2>
 <div class="grid">
 <div class="card"><h3>Woven Damask</h3><p>Detail halus & premium.</p></div>
@@ -290,7 +290,7 @@ Konsultasi WhatsApp
 </section>
 
 <!-- CTA -->
-<section class="cta">
+<section class="cta" id="kontak">
 <div class="cta-box">
 <h2>Mulai Branding Sekarang</h2>
 <p>Cocok untuk brand fashion & UMKM.</p>
@@ -323,6 +323,34 @@ Konsultasi WhatsApp
 </footer>
 
 <script>
+// ================= SEARCH =================
+function searchContent(){
+let input = document.getElementById("searchInput").value.toLowerCase();
+
+if(input.includes("kenapa")){
+  document.getElementById("kenapa").scrollIntoView({behavior:"smooth"});
+}
+else if(input.includes("masalah")){
+  document.getElementById("masalah").scrollIntoView({behavior:"smooth"});
+}
+else if(input.includes("solusi")){
+  document.getElementById("solusi").scrollIntoView({behavior:"smooth"});
+}
+else if(input.includes("kontak") || input.includes("wa")){
+  document.getElementById("kontak").scrollIntoView({behavior:"smooth"});
+}
+else{
+  alert("Tidak ditemukan");
+}
+}
+
+// ENTER KEY
+document.getElementById("searchInput").addEventListener("keypress", function(e){
+if(e.key === "Enter"){
+  searchContent();
+}
+});
+
   window.addEventListener("scroll", function(){
 let navbar = document.querySelector(".navbar");
 
