@@ -1,0 +1,137 @@
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Inter',sans-serif;
+  color:#111;
+  background:#fafafa;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 20px;
+}
+
+/* ================= HEADER ================= */
+.header{
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #eee;
+  z-index:999;
+}
+
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:35px 0; /* 🔥 HEADER JADI BESAR */
+}
+
+/* LOGO */
+.logo img{
+  height:90px; /* 🔥 BESAR */
+  width:auto;
+}
+
+/* MENU */
+.menu{
+  display:flex;
+  gap:35px;
+}
+
+.menu a{
+  text-decoration:none;
+  color:#111;
+  font-weight:500;
+  font-size:17px;
+}
+
+/* BUTTON */
+.btn{
+  background:#111;
+  color:#fff;
+  padding:14px 28px;
+  border-radius:10px;
+  text-decoration:none;
+}
+
+/* ================= HERO ================= */
+.hero{
+  padding:120px 0 80px;
+}
+
+.hero h1{
+  font-size:48px;
+  line-height:1.25;
+  font-weight:700;
+}
+
+.hero p{
+  margin-top:20px;
+  color:#555;
+}
+
+.hero-box{
+  margin-top:40px;
+  padding:25px;
+  border-radius:12px;
+  background:#fff;
+  border:1px solid #eee;
+}
+
+/* SECTION */
+.section{
+  padding:90px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title h2{
+  font-size:34px;
+}
+
+.grid{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.col-2{
+  width:calc(50% - 12px);
+}
+
+.card{
+  background:#fff;
+  padding:25px;
+  border-radius:14px;
+  border:1px solid #eee;
+}
+
+/* FOOTER */
+.footer{
+  border-top:1px solid #eee;
+  padding:30px;
+  text-align:center;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .menu{display:none;}
+  .logo img{height:65px;}
+  .header-inner{padding:25px 0;}
+  .col-2{width:100%;}
+  .hero h1{font-size:30px;}
+}

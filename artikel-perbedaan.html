@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Perbedaan Woven Damask vs Satin | PT Label Baju</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#fff;color:#333;line-height:1.7;}
+img{max-width:100%;height:auto;}
+
+/* TOPBAR */
+.topbar{background:#111;color:#fff;padding:8px 20px;font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;}
+
+/* NAVBAR */
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:20px;border-bottom:1px solid #eee;flex-wrap:wrap;}
+.menu-btn{font-size:24px;cursor:pointer;display:none;}
+.nav-menu{display:flex;gap:10px;flex-wrap:wrap;}
+.nav-menu a{text-decoration:none;color:#333;font-size:14px;}
+
+/* SIDEBAR */
+.sidebar{position:fixed;top:0;left:-260px;width:260px;height:100%;background:#111;color:#fff;padding:20px;transition:0.3s;z-index:999;}
+.sidebar.active{left:0;}
+.sidebar a{display:block;color:#fff;padding:12px 0;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.1);}
+.close-btn{text-align:right;cursor:pointer;margin-bottom:20px;}
+
+/* COVER */
+.cover{width:100%;height:300px;object-fit:cover;}
+
+/* CONTENT */
+.article{max-width:800px;margin:40px auto;padding:0 20px;}
+.article h1{font-size:30px;margin-bottom:10px;}
+.meta{font-size:14px;color:#777;margin-bottom:20px;}
+.article p{margin-bottom:15px;color:#444;}
+.article h2{margin:25px 0 10px;}
+
+/* CTA */
+.cta{background:#f7f7f7;padding:40px 20px;text-align:center;margin-top:40px;border-radius:10px;}
+.btn-wa{background:#ff4b2b;color:#fff;padding:12px 20px;border-radius:6px;text-decoration:none;display:inline-block;margin-top:10px;font-weight:600;}
+
+/* MOBILE */
+@media(max-width:768px){
+.menu-btn{display:block;}
+.nav-menu{display:none;}
+.article h1{font-size:24px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+<span class="close-btn" onclick="toggleSidebar()">✖</span>
+<a href="index.html">Beranda</a>
+<a href="SolusiBrending.html">Solusi Branding</a>
+<a href="Produklabel.html">Produk Label</a>
+<a href="industri.html">Industri</a>
+<a href="insight.html">Insight</a>
+<a href="tentang.html">Tentang Kami</a>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+<span>📍 Indonesia</span>
+<span>📞 +62 812-XXXX-XXXX</span>
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+<h2>PT LABEL BAJU</h2>
+<span class="menu-btn" onclick="toggleSidebar()">☰</span>
+
+<div class="nav-menu">
+<a href="index.html">Beranda</a>
+<a href="SolusiBrending.html">Solusi Branding</a>
+<a href="Produklabel.html">Produk Label</a>
+<a href="industri.html">Industri</a>
+<a href="insight.html">Insight</a>
+<a href="tentang.html">Tentang Kami</a>
+</div>
+</div>
+
+<img class="cover" src="https://via.placeholder.com/1200x400">
+
+<div class="article">
+<h1>Perbedaan Woven Damask vs Satin</h1>
+<div class="meta">5 Maret 2026 • 4 menit baca</div>
+
+<p>Memilih label yang tepat sangat penting untuk branding produk Anda.</p>
+
+<h2>1. Woven Damask</h2>
+<p>Detail tinggi, tampilan premium, dan tahan lama.</p>
+
+<h2>2. Satin Label</h2>
+<p>Lembut, nyaman, dan cocok untuk pakaian sehari-hari.</p>
+
+<h2>3. Mana yang Lebih Baik?</h2>
+<p>Premium → Damask, Nyaman → Satin.</p>
+
+<h2>Kesimpulan</h2>
+<p>Pilih sesuai positioning brand Anda.</p>
+
+<div class="cta">
+<h2>Bingung Pilih Label?</h2>
+<p>Konsultasi GRATIS sekarang!</p>
+<a href="#" class="btn-wa">Chat WhatsApp</a>
+</div>
+
+</div>
+
+<script>
+function toggleSidebar(){
+document.getElementById('sidebar').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

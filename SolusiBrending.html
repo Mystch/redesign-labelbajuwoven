@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Solusi Branding | PT Label Baju</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#fff;
+color:#333;
+}
+
+img{max-width:100%;height:auto;}
+
+/* TOPBAR */
+.topbar{
+background:#111;
+color:#fff;
+padding:8px 20px;
+font-size:14px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+border-bottom:1px solid #eee;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.menu-btn{
+font-size:24px;
+cursor:pointer;
+display:none;
+}
+
+.nav-menu{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.nav-menu a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+font-size:14px;
+}
+
+/* SIDEBAR */
+.sidebar{
+position:fixed;
+top:0;
+left:-260px;
+width:260px;
+height:100%;
+background:#111;
+color:#fff;
+padding:20px;
+transition:0.3s;
+z-index:999;
+}
+
+.sidebar.active{left:0;}
+
+.sidebar a{
+display:block;
+color:#fff;
+text-decoration:none;
+padding:12px 0;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.close-btn{
+font-size:20px;
+cursor:pointer;
+margin-bottom:20px;
+display:block;
+text-align:right;
+}
+
+/* HERO */
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+padding:60px 20px;
+align-items:center;
+gap:30px;
+}
+
+.hero h1{
+font-size:36px;
+margin-bottom:15px;
+}
+
+.hero p{
+color:#666;
+margin-bottom:20px;
+}
+
+/* BUTTON */
+.btn-primary{
+background:#ff4b2b;
+color:#fff;
+padding:12px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+}
+
+/* SECTION */
+.section{
+padding:60px 20px;
+text-align:center;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.card{
+border:1px solid #eee;
+padding:25px;
+border-radius:8px;
+}
+
+.card p{
+color:#666;
+margin-top:10px;
+}
+
+/* DARK */
+.dark{
+background:#111;
+color:#fff;
+}
+
+.dark .card{
+background:#1a1a1a;
+border:none;
+}
+
+/* CTA */
+.cta{
+background:#f7f7f7;
+padding:60px 20px;
+text-align:center;
+}
+
+.cta-box{
+max-width:600px;
+margin:auto;
+background:#fff;
+padding:30px;
+border-radius:10px;
+}
+
+.cta a{
+margin-top:15px;
+display:inline-block;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero h1{
+font-size:26px;
+}
+
+.nav-menu{
+display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+<span class="close-btn" onclick="toggleSidebar()">✖</span>
+
+<a href="index.html">Beranda</a>
+<a href="SolusiBrending.html">Solusi Branding</a>
+<a href="Produklabel.html">Produk Label</a>
+<a href="industri.html">Industri</a>
+<a href="insight.html">Insight</a>
+<a href="tentang.html">Tentang Kami</a>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+<span>📍 Indonesia</span>
+<span>📞 +62 812-XXXX-XXXX</span>
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+<h2>PT LABEL BAJU</h2>
+
+<span class="menu-btn" onclick="toggleSidebar()">☰</span>
+
+<div class="nav-menu">
+<a href="index.html">Beranda</a>
+<a href="SolusiBrending.html">Solusi Branding</a>
+<a href="Produklabel.html">Produk Label</a>
+<a href="industri.html">Industri</a>
+<a href="insight.html">Insight</a>
+<a href="tentang.html">Tentang Kami</a>
+</div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>Brand Bagus Tapi Terlihat Biasa?</h1>
+<p>Banyak brand fashion gagal naik kelas bukan karena produknya, tapi karena branding yang kurang kuat.</p>
+<a href="#" class="btn-primary">Konsultasi Sekarang</a>
+</div>
+
+<div>
+<img src="https://via.placeholder.com/500x400">
+</div>
+</section>
+
+<!-- MASALAH -->
+<section class="section">
+<div class="container">
+<h2>Masalah yang Sering Terjadi</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Produk bagus tapi terlihat biasa</h3>
+<p>Brand jadi kurang menarik di mata customer.</p>
+</div>
+
+<div class="card">
+<h3>Label tidak konsisten</h3>
+<p>Tampilan brand jadi tidak profesional.</p>
+</div>
+
+<div class="card">
+<h3>Sulit menaikkan harga</h3>
+<p>Customer tidak melihat value produk.</p>
+</div>
+
+<div class="card">
+<h3>Kurang dipercaya konsumen</h3>
+<p>Brand belum terlihat credible.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SOLUSI -->
+<section class="section">
+<div class="container">
+<h2>Solusi dari Kami</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Woven Damask Premium</h3>
+<p>Detail halus & terlihat eksklusif.</p>
+</div>
+
+<div class="card">
+<h3>Hangtag Custom</h3>
+<p>Meningkatkan value produk secara visual.</p>
+</div>
+
+<div class="card">
+<h3>Konsistensi Produksi</h3>
+<p>Hasil stabil untuk semua batch produksi.</p>
+</div>
+
+<div class="card">
+<h3>Desain Sesuai Brand</h3>
+<p>Menyesuaikan dengan identitas brand Anda.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TRUST -->
+<section class="section dark">
+<div class="container">
+<h2>Kenapa Pilih Kami?</h2>
+
+<div class="grid">
+<div class="card">Berpengalaman di industri fashion</div>
+<div class="card">Kualitas stabil</div>
+<div class="card">Support desain</div>
+<div class="card">Sudah dipercaya banyak brand</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<div class="cta-box">
+<h2>Siap Naikkan Value Brand Anda?</h2>
+<p>Cocok untuk brand fashion & UMKM.</p>
+<a href="#" class="btn-primary">Hubungi Kami Sekarang</a>
+</div>
+</section>
+
+<script>
+function toggleSidebar(){
+document.getElementById('sidebar').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

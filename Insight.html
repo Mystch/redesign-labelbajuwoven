@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Insight | PT Label Baju</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#fff;
+color:#333;
+}
+
+img{max-width:100%;height:auto;}
+
+/* TOPBAR */
+.topbar{
+background:#111;
+color:#fff;
+padding:8px 20px;
+font-size:14px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+border-bottom:1px solid #eee;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.menu-btn{
+font-size:24px;
+cursor:pointer;
+display:none;
+}
+
+.nav-menu{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.nav-menu a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+font-size:14px;
+}
+
+/* SIDEBAR */
+.sidebar{
+position:fixed;
+top:0;
+left:-260px;
+width:260px;
+height:100%;
+background:#111;
+color:#fff;
+padding:20px;
+transition:0.3s;
+z-index:999;
+}
+
+.sidebar.active{left:0;}
+
+.sidebar a{
+display:block;
+color:#fff;
+text-decoration:none;
+padding:12px 0;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.close-btn{
+font-size:20px;
+cursor:pointer;
+margin-bottom:20px;
+display:block;
+text-align:right;
+}
+
+/* HERO */
+.hero{
+padding:60px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#666;
+}
+
+/* SECTION */
+.section{
+padding:60px 20px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+/* CARD */
+.card{
+border:1px solid #eee;
+border-radius:10px;
+overflow:hidden;
+background:#fff;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* IMAGE */
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+/* CONTENT */
+.card-content{
+padding:20px;
+}
+
+.card-content h3{
+margin-bottom:10px;
+font-size:18px;
+}
+
+.card-content p{
+color:#666;
+font-size:14px;
+}
+
+/* DATE */
+.date{
+font-size:12px;
+color:#999;
+margin-bottom:10px;
+display:block;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.hero h1{
+font-size:26px;
+}
+
+.nav-menu{
+display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+<span class="close-btn" onclick="toggleSidebar()">✖</span>
+
+<a href="index.html">Beranda</a>
+<a href="SolusiBrending.html">Solusi Branding</a>
+<a href="Produklabel.html">Produk Label</a>
+<a href="industri.html">Industri</a>
+<a href="insight.html">Insight</a>
+<a href="tentang.html">Tentang Kami</a>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+<span>📍 Indonesia</span>
+<span>📞 +62 812-XXXX-XXXX</span>
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+<h2>PT LABEL BAJU</h2>
+
+<span class="menu-btn" onclick="toggleSidebar()">☰</span>
+
+<div class="nav-menu">
+<a href="index.html">Beranda</a>
+<a href="SolusiBrending.html">Solusi Branding</a>
+<a href="Produklabel.html">Produk Label</a>
+<a href="industri.html">Industri</a>
+<a href="insight.html">Insight</a>
+<a href="tentang.html">Tentang Kami</a>
+</div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Insight & Edukasi Branding</h1>
+<p>Tips, strategi, dan insight untuk mengembangkan brand fashion Anda</p>
+</section>
+
+<!-- ARTIKEL -->
+<section class="section">
+<div class="container">
+
+<div class="grid">
+
+<!-- ARTIKEL 1 -->
+<a href="artikel-detail.html" class="card">
+<img src="https://via.placeholder.com/400x300">
+<div class="card-content">
+<span class="date">10 Maret 2026</span>
+<h3>Kenapa Label Baju Penting untuk Branding?</h3>
+<p>Label bukan sekadar pelengkap, tapi bagian penting dari identitas brand Anda.</p>
+</div>
+</a>
+
+<!-- ARTIKEL 2 -->
+<a href="artikel-premium.html" class="card">
+<img src="https://via.placeholder.com/400x300">
+<div class="card-content">
+<span class="date">8 Maret 2026</span>
+<h3>Cara Membuat Brand Fashion Terlihat Premium</h3>
+<p>Mulai dari material label hingga desain, semua berpengaruh pada persepsi pelanggan.</p>
+</div>
+</a>
+
+<!-- ARTIKEL 3 -->
+<a href="artikel-perbedaan.html" class="card">
+<img src="https://via.placeholder.com/400x300">
+<div class="card-content">
+<span class="date">5 Maret 2026</span>
+<h3>Perbedaan Woven Damask vs Satin</h3>
+<p>Kenali jenis label terbaik untuk produk Anda agar sesuai dengan target market.</p>
+</div>
+</a>
+
+<!-- ARTIKEL 4 -->
+<a href="artikel-kesalahan.html" class="card">
+<img src="https://via.placeholder.com/400x300">
+<div class="card-content">
+<span class="date">2 Maret 2026</span>
+<h3>Kesalahan Branding yang Sering Dilakukan UMKM</h3>
+<p>Banyak brand gagal berkembang karena kesalahan kecil yang sering diabaikan.</p>
+</div>
+</a>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<script>
+function toggleSidebar(){
+document.getElementById('sidebar').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
